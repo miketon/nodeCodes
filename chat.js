@@ -8,7 +8,7 @@ chatServer.on('connection', function(client){ // listener to execute function wh
   // We are naming that reference 'client'
   client.name = client.remoteAddress + ':' + client.remotePort ;
   client.write('Hi! ' + client.name + '\n')                    ;
-  console.log(client.name + ' joined');
+  console.log(client.name + ' joined')                         ;
   clientList.push(client)                                      ;
   // client.write('Bye!\n')                                    ;
   // client.end()                                              ;
@@ -36,8 +36,8 @@ function broadcast(message, client){
         clientList[i].write(client.name +'->'+ message);
       }
       else{
-        cleanup.push(clientList[i]);
-        clientList[i].destroy;
+        cleanup.push(clientList[i]) ;
+        clientList[i].destroy       ;
       }
     }
   }
