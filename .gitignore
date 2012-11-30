@@ -1,0 +1,4 @@
+# Ignore The following directories / file extensions
+node_modules
+
+# Ignore the following file extensions
